@@ -1,0 +1,277 @@
+.hero {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+    min-height: 100vh;
+}
+
+.hero-left {
+    color: #fff;
+    flex: 1;
+    padding: 4rem;
+}
+
+.hero-heading {
+    background: #6D08CF;
+    background: linear-gradient(to right, #7300ff 14%, #cd00fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    font-weight: 650;
+    margin-bottom: 1rem;
+    font-family: HeroFont, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0;
+    animation: typing 6s steps(40, end) 1s infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 100%;
+    }
+
+    90% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.hero-subheading {
+    color: #f3f3f3;
+    font-family: HeroFont, sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content {
+    color: #c0bebe;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 3rem;
+    }
+
+    .hero-subheading {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .hero-content {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 2rem;
+    }
+
+    .hero-subheading {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .hero-content {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        margin: 10px;
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.hero-social-icons a {
+    margin-right: 1rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.hero-social-icons video {
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+}
+
+.hero-social-icons a:hover video {
+    transform: scale(1.2);
+    transition: ease-in-out 0.3s;
+}
+
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-container {
+    position: relative;
+    display: inline-block;
+    align-self: center;
+}
+
+.hero-image {
+    width: 90%;
+    max-width: 500px;
+    z-index: 99;
+    height: auto;
+    border-radius: 10px;
+    animation: scaleUp 1s ease-in-out, moveUpDown 3s ease-in-out infinite;
+    overflow-x: hidden;
+}
+
+.ring-image {
+    border-radius: 50%;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 480px;
+    max-height: 480px;
+    animation: rotateRing 7s linear infinite;
+}
+
+@keyframes rotateRing {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        margin: 10px;
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-left {
+        padding: 1rem;
+    }
+
+    .hero-right {
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-right {
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+
+    .ring-image {
+        max-width: 400px;
+        max-height: 400px;
+        bottom: -40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        width: 100%;
+        max-width: 300px;
+        overflow-x: hidden;
+    }
+    
+    .ring-image {
+        max-width: 300px;
+        max-height: 300px;
+        bottom: -30px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

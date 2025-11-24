@@ -1,0 +1,153 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+.navbar-logo img {
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 50%;
+}
+
+.navbar-links {
+  padding: 12px;
+  border-radius: 1rem;
+  font-family: 'poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #ffffff24;
+  backdrop-filter: blur(5px);
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a,
+.navbar-button {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a:hover,
+.navbar-button:hover {
+  color: #ffffff;
+  border-radius: 12px;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-links a:hover{
+  color: rgb(111, 0, 255);
+  font-weight: 500;
+}
+
+.navbar-button {
+  font-size: 1rem;
+  font-family: ContentFont, sans-serif;
+  border-radius: 10px;
+  background-color: #5900ff;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 32px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #5e5e5e56;
+    backdrop-filter: blur(5px);
+    margin: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 200px;
+  }
+
+  .navbar-logo {
+    margin-right: 10px;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    gap: 1rem;
+    margin-top: 1rem;
+    background-color: #333;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    margin-right: 20px;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    background-color: #5e5e5e56;
+    backdrop-filter: blur(5px);
+    margin: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 200px;
+    transform: scale(0.9);
+  }
+
+  .navbar-logo {
+    margin-right: 10px;
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    gap: 1rem;
+    margin-top: 1rem;
+    background-color: #333;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    margin-right: 20px;
+    display: flex;
+  }
+}
